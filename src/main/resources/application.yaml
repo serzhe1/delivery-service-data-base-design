@@ -1,1 +1,14 @@
-spring.application.name=delivery-service
+server:
+  port: 8844
+
+spring:
+  application:
+    name: delivery-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/delivery?currentSchema=app
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
